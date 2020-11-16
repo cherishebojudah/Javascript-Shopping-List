@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var myList = [
+        ['Mouka spring mattress', 2],
+        ['Dining chairs', 1],
+        ['Macbbok Pro', 2],
+        ['Nike Airmax', 2],
+        ['Work outfits', 8],
+        ['Dumb waiter', 1],
+        ['Standing fan', 2],
+        ['Work-out gear', 5]
+    ];
+    
+    var newList = [];
+
+    newList.push(myList[0]);
+    myList.shift();
+    newList.push(myList[myList.length-1]);
+    myList.pop();
+
+    myList.splice(3, 1, ['Orange juice', 17]);
+
+    myList.forEach((item) => {
+       for(let key in item) {
+           console.log(`${item[0]}: ${item[1]}`);
+       }
+    });
+
+    // myList.forEach(myList => console.log())
+    
+    
+
+    console.log(newList);
+    newList.forEach(newList => console.log(newList));
+    console.log(myList);
+    myList.forEach(myList => console.log(myList));
+    </script>
+</body>
+</html>
